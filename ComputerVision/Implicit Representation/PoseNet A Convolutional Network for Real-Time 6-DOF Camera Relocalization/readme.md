@@ -113,10 +113,6 @@ To test on indoor scenes we use the publically available 7Scenes dataset, https:
 
 ## 5. Experiments
 
-![image-20220611213913592](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611213913592.png)
-
-
-
 | Scene            | # Frames Train Test | Spatial Extent (m) | SCoRe Forest (Uses RGB-D) | Dist. to Conv. Nearest Neighbour | PoseNet        | Dense PoseNet  |                |
 | ---------------- | ------------------- | ------------------ | ------------------------- | -------------------------------- | -------------- | -------------- | -------------- |
 | King’s College   | 1220                | 343                | 140 x 40m                 | N/A                              | 3.34m, 2.96*◦* | 1.92m, 2.70*◦* | 1.66m, 2.43*◦* |
@@ -132,27 +128,7 @@ To test on indoor scenes we use the publically available 7Scenes dataset, https:
 | Red Kitchen      | 7000                | 5000               | 4 x 3 x 1.5m              | 0.04m, 0.76*◦*                   | 0.58m, 5.65*◦* | 0.59m, 4.32*◦* | 0.58m, 4.17*◦* |
 | Stairs           | 2000                | 1000               | 2.5 x 2 x 1.5m            | 0.32m, 1.32*◦*                   | 0.56m, 7.71*◦* | 0.47m, 6.93*◦* | 0.48m, 6.54*◦* |
 
-
-
-![image-20220611214010593](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611214010593.png)
-
-Figure 7: **Localization performance.** These ﬁgures show our localization accuracy for both position and orientation as a cumulative histogram of errors for the entire testing set. The regression convnet outperforms the nearest neighbour feature matching which demonstrates we regress ﬁner resolution results than given by training. Comparing to the RGB-D SCoRe Forest approach shows that our method is competitive, but outperformed by a more expensive depth approach. Our method does perform better on the hardest few frames, above the 95th percentile, with our worst error lower than the worst error from the SCoRe approach.
-
-
-
-![image-20220611214050372](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611214050372.png)
-
-![image-20220611214149321](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611214149321.png)
-
-Figure 8: **Robustness to challenging real life situations.** Registration with point based techniques such as SIFT fails in examples (a-c), therefore ground truth measurements are not available. None of these types of challenges were seen during training. As convnets are able to understand objects and contours they are still successful at estimating pose from the building’s contour in the silhouetted examples (b) or even under extreme motion blur (a). Many of these quasi invariances were enhanced by pretraining from the scenes dataset.
-
-![image-20220611214320414](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611214320414.png)
-
-![image-20220611214334778](/Users/xieyang/Library/Application Support/typora-user-images/image-20220611214334778.png)
-
-
-
-Above is the main experiment part of the research. To conclude, they show a state-of-the-art results. On the outdoor dataset, the localization results produced by center cropping produce an average of 2 to 3 meters and 3 to 4 degrees of localization error, with dense cropping producing slightly less error than center cropping; on the indoor dataset and, on the other hand, it can basically produce localization error within 0.5 meters.
+To conclude, they show a state-of-the-art results. On the outdoor dataset, the localization results produced by center cropping produce an average of 2 to 3 meters and 3 to 4 degrees of localization error, with dense cropping producing slightly less error than center cropping; on the indoor dataset and, on the other hand, it can basically produce localization error within 0.5 meters.
 
 In addition, PoseNet is more resistant to special situations such as light transformation (e.g., night) and unknown internal parameters, and can produce acceptable and more robust results. In general, this is an advantage of deep learning-based methods, while traditional geometric methods often produce less than satisfactory results in these special cases.
 
