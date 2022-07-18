@@ -14,9 +14,15 @@
 
 ### General Conclusion
 
-### Implicit Representation
+### 3D SLAM
 
 - ICCV 2015 *PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization
+- DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+- Learning Multi-Scene Absolute Pose Regression with Transformers
+- CVPR2022(Oral) *RPMG: Projective Manifold Gradient Layer for Deep Rotation Regression 
+- PoseNetV2: Geometric loss functions for camera pose regression with deep learning
+- Visual Odometry Revisited What Should Be Learnt
+- Visual Camera Re-Localizationfrom RGB and RGB-D Images Using DSAC
 
 ### Semantic Segmentation
 

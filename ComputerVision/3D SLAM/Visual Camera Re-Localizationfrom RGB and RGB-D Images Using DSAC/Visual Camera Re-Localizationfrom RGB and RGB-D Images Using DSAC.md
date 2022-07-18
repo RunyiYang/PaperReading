@@ -1,0 +1,7 @@
+# Visual Camera Re-Localizationfrom RGB and RGB-D Images Using DSAC
+
+## 1 Abstract
+
+We describe a learning-based system that estimates the camera position and orientation from a single input image relativeto a known environment. The system is flexible w.r.t. the amount of information available at test and at training time, catering to differentapplications. Input images can be RGB-D or RGB, and a 3D model of the environment can be utilized for training but is not necessary.In the minimal case, our system requires only RGB images and ground truth poses at training time, and it requires only a single RGBimage at test time. The framework consists of a deep neural network and fully differentiable pose optimization. The neural networkpredicts so called scene coordinates, i.e. dense correspondences between the input image and 3D scene space of the environment.The pose optimization implements robust fitting of pose parameters using differentiable RANSAC (DSAC) to facilitate end-to-endtraining. The system, an extension of DSAC++ and referred to as DSAC*, achieves state-of-the-art accuracy on various public datasetsfor RGB-based re-localization, and competitive accuracy for RGB-D based re-localization.
+
+- 
